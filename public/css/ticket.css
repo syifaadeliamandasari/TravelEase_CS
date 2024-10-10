@@ -1,0 +1,314 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --white-color: #fff;
+    --blue-color: #366389;
+    --grey-color: #366389;
+    --grey-color-light: #f0f0f0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e7f2fd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body.dark {
+    background-color: #333;
+    --white-color: #333;
+    --blue-color: #fff;
+    --grey-color: #f2f2f2;
+    --grey-color-light: #aaa;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 85%;
+    margin-left: 260px;
+}
+
+.header .title {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.header .title .icon {
+    color: gold;
+    margin-right: 10px;
+}
+
+.header .user-options {
+    display: flex;
+    align-items: center;
+}
+
+.header .user-options i {
+    margin: 0 15px;
+    font-size: 26px;
+}
+
+.header .user-options .username {
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+.sidebar {
+    background-color: var(--white-color);
+    width: 260px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 80px 20px;
+    z-index: 100;
+    transition: all 0.5s ease;
+}
+
+.menu_content {
+    position: relative;
+}
+
+.menu_items {
+    padding: 0;
+    list-style: none;
+}
+
+.navlink_icon {
+    position: relative;
+    font-size: 22px;
+    min-width: 50px;
+    line-height: 40px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 6px;
+}
+
+.navlink_icon:hover {
+    background: var(--blue-color);
+}
+
+.sidebar .nav_link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 4px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--grey-color);
+    white-space: nowrap;
+}
+
+.sidebar .nav_link:hover {
+    color: var(--white-color);
+    background: var(--blue-color);
+}
+
+.bottom_content {
+    position: fixed;
+    bottom: 60px;
+    left: 0;
+    width: 260px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.bottom {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 18px 0;
+    text-align: center;
+    width: 100%;
+    color: var(--grey-color);
+    border-top: 1px solid var(--grey-color-light);
+    background-color: var(--white-color);
+}
+
+.bottom i {
+    font-size: 20px;
+}
+
+.bottom span {
+    font-size: 18px;
+}
+
+.user_profile {
+    margin-top: 3%;
+    position: relative;
+}
+
+.icon1 {
+    padding: 10px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #366389;
+    margin-right: 160px;
+}
+
+.teks2 {
+    color: #366389;
+    margin-left: 50px;
+    margin-top: -18%;
+}
+
+.user_name {
+    color: black;
+    font-size: 16px;
+    margin-left: 70px;
+    margin-top: -10px;
+    position: relative;
+    z-index: 1;
+}
+
+.icon3 {
+    background-color: #34658c;
+    border-radius: 50%;
+    padding: 10px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    position: absolute;
+    top: -50%;
+}
+
+.user_name {
+    color: black;
+    font-size: 16px;
+    margin-left: 70px;
+    margin-top: -10px;
+    position: relative;
+    z-index: 1;
+}
+
+.icon-down {
+    color: rgb(74, 74, 74);
+}
+
+.content {
+    padding: 20px;
+    margin-left: 260px;
+    width: calc(100% - 260px);
+    box-sizing: border-box;
+}
+
+.content1 {
+    padding: 20px;
+    margin-left: 260px;
+    width: calc(100% - 260px);
+    box-sizing: border-box;
+    margin-top: -2%;
+}
+
+.status-card {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: 20px;
+    margin-top: 20px;
+    text-decoration: none; /* Menghilangkan garis bawah */
+    color: inherit; /* Mengatur warna teks agar sama dengan warna teks di dalam .status-card */
+}
+
+.icon {
+    margin-right: 10px;
+}
+
+.details {
+    flex-grow: 1;
+}
+
+.status {
+    background-color: #e9ecef;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #28a745;
+    border: 1px solid #28a745;
+}
+
+.status1 {
+    background-color: #e9ecef;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #DD8E46;
+    border: 1px solid #DD8E46;
+    margin-right: 10px;
+}
+
+.status-with-circle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.status {
+    margin-right: 10px;
+}
+
+.icon4 {
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    color: #34658c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+}
+
+.inputs{
+    position: relative;
+}
+
+.form-control {
+    text-indent: 15px;
+    border: none;
+    height: 45px;
+    border-radius: 0px;
+    border-bottom: 1px solid #eee;
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #eee;
+    outline: 0;
+    box-shadow: none;
+    border-bottom: 1px solid #34658c;
+}
+
+.form-control:focus  {
+    color: #34658c;
+}
+
+.inputs i{
+    position: absolute;
+    top: 14px;
+    left: 4px;
+    color: #b8b9bc;
+}
