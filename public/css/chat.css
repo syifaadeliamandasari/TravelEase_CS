@@ -17,7 +17,6 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #ffffff;
-    display: flex;
     flex-direction: column;
     align-items: center;
 }
@@ -47,12 +46,8 @@ body.dark {
     font-weight: bold;
 }
 
-.title .icon {
-    color: gold;
-    margin-right: 10px;
-}
 .title {
-    align-items: center; /* Vertikal center */
+    align-items: center;
     font-size: 22px;
     font-weight: bold;
     margin-right: 700px;
@@ -63,6 +58,7 @@ body.dark {
     color: gold;
     margin-right: 10px;
 }
+
 .header .user-options {
     display: flex;
     align-items: center;
@@ -80,10 +76,11 @@ body.dark {
 
 .sidebar {
     background-color: var(--white-color);
-    width: 260px;
+    width: 360px;
     position: fixed;
     top: 0;
     left: 0;
+    overflow: visible;
     height: 100%;
     padding: 80px 20px;
     z-index: 100;
@@ -91,9 +88,7 @@ body.dark {
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Menambahkan box shadow */
 }
 
-.menu_content {
-    position: relative;
-}
+
 
 .menu_items {
     padding: 0;
@@ -122,7 +117,7 @@ body.dark {
     border-radius: 8px;
     text-decoration: none;
     color: var(--grey-color);
-    white-space: nowrap;
+
 }
 
 .sidebar .nav_link:hover {
@@ -146,12 +141,270 @@ body.dark {
     margin-left: 50px;
     margin-top: -18%;
 }
-.container1 {
-    background-color: #EFF2F7; /* Warna putih */
-    padding: 20px; /* Memberikan jarak di dalam kontainer */
-    margin: 20px; /* Memberikan jarak di luar kontainer */
-    border-radius: 1px; /* Mengatur sudut agar terlihat lebih halus */
-    width: 920px;
-    margin-left: 628px;
-    margin-top: -2%;
+
+.icon {
+    color: gold;
+    margin-right: 2px;
+    margin-top: -70%;
+    font-size: 26px;
+}
+.icons{
+    color: black;
+    margin-right: 5px;
+    margin-top: -70%;
+    font-size: 26px;
+}
+.iconss{
+    color: black;
+    margin-left: 250px;
+    transform: translateY(-20px); /* Geser ke atas sebanyak 10px */
+    font-size: 20px;
+}
+.logo_item {
+    margin-bottom: 50px; /* Sesuaikan jaraknya */
+}
+.teks5 {
+    font-size: 15px;
+    margin-top: -9%;
+    margin-left: 21%;
+}
+.icon-down {
+    margin-left: 260px;
+    margin-top: -100%;
+    color: rgb(95, 93, 93);
+}
+
+.card {
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.card-header {
+    display: flex;
+    flex-direction: column; /* Susun elemen secara vertikal */
+    align-items: flex-start; /* Pastikan elemen tetap rata di kiri */
+}
+.batal {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    white-space: nowrap; /* Mencegah teks berpindah ke baris baru */
+    text-overflow: ellipsis;
+}
+
+.author {
+    font-size: 11px;
+    color: rgb(0, 0, 0);
+    margin-top: 5px; /* Jarak kecil antara .batal dan .author */
+    white-space: nowrap; /* Mencegah teks berpindah ke baris baru */
+    text-overflow: ellipsis;
+}
+
+  .card-header h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: normal;
+  }
+
+
+  .profile-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  .profile-icon {
+    font-size: 24px;
+    color: #366389; /* Warna ikon */
+}
+
+.card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 70%;;
+}
+
+ .status {
+    background-color: #e0f7f4;
+    color: #00a389;
+    border: none;
+    padding: 10px 20px;
+    border: 1px solid #28a745;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    position: relative; /* Supaya garis kecil bisa diposisikan di ujung */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Animasi untuk hover */
+}
+
+.status:hover {
+    background-color: #00a389; /* Ubah warna background saat di-hover */
+    color: #ffffff; /* Ubah warna teks saat di-hover */
+}
+
+.status::after {
+    content: "";
+    position: absolute;
+    bottom: 0; /* Garis di bagian bawah */
+    right: 0; /* Garis di ujung kanan */
+    width: 20px; /* Panjang garis kecil */
+    height: 2px; /* Tinggi garis */
+}
+
+.status:hover::after {
+    width: 100%; /* Buat garis membentang sepanjang tombol saat di-hover */
+}
+
+.icon4 {
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    color: #34658c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-left: 230px;
+    margin-top: -10%;
+}
+.header {
+    display: flex;
+    justify-content: space-between; /* Memastikan jarak antara konten di header */
+    align-items: center; /* Mengatur elemen secara vertikal */
+    padding: 20px;
+    background-color: #ffffff; /* Warna latar belakang */
+    border-bottom: 2px solid #ccc; /* Garis batas bawah untuk memperjelas header */
+    width: 100%; /* Atur lebar sesuai kebutuhan */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek kedalaman */
+}
+
+.header-content {
+    display: flex;
+    align-items: center; /* Menyelaraskan ikon dan judul */
+    margin-left: 200px;
+
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0; /* Hapus semua margin */
+    margin-right: 10px; /* Jarak antara judul dan ikon */
+    margin-top: 2%;
+}
+
+.status1 {
+    background-color: #e0f7f4;
+    color: #00a389;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 95px;
+    height: 50px;
+    margin-left: 1360px;
+    border: 1px solid #28a745;
+}
+.tab-navigation {
+    display: flex;
+    margin-top: 1%;
+}
+
+.tab {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    border-bottom: 2px solid transparent;
+}
+
+.tab:hover {
+    background-color: #f0f0f0;
+}
+
+.tab.active {
+    font-weight: bold;
+    color: #000000;
+    margin-left: 280px;
+}
+.icons1{
+    margin-left: 200px;
+    margin-right: 10px;
+    margin-top: 2%;
+}
+
+.nama, .hinga, .date {
+    font-size: 15px; /* Ukuran font */
+    margin-left: 30px; /* Jarak ke kanan untuk semua elemen ini */
+    margin-top: 6%; /* Jarak atas */
+}
+
+.hinga {
+    margin-left: 20px; /* Jarak khusus untuk elemen .hinga */
+}
+
+.date {
+    margin-left: 20px; /* Jarak khusus untuk elemen .date */
+}
+.nama{
+    margin-left: -234px;
+}
+
+.chat-container {
+    background-color: #EFF2F7; /* Warna abu-abu untuk container chat */
+    padding: 20px;
+    height: 519px;
+    border-radius: 8px; /* Membuat sudut container melengkung */
+    margin-top: 2px; /* Jarak antara tab dan container chat */
+    position: relative; /* Menyediakan posisi relatif untuk anak elemen */
+}
+
+.chat-message {
+    margin-bottom: 15px; /* Jarak antara pesan */
+    margin-left: 400px;
+}
+
+.user {
+    font-weight: bold;
+}
+
+.message {
+    margin-left: 10px; /* Jarak antara nama pengguna dan pesan */
+}
+.date-container {
+    display: flex;
+    align-items: center; /* Mengatur konten agar berada di tengah secara vertikal */
+    justify-content: center; /* Mengatur konten agar berada di tengah secara horizontal */
+    margin: 5px 0; /* Margin atas dan bawah */
+}
+
+.date-divider {
+    flex: 1; /* Membuat garis horizontal mengisi ruang yang tersisa */
+    border: none; /* Menghapus border default */
+    border-top: 1px solid #000; /* Menambahkan garis horizontal */
+}
+
+.date-text {
+    margin: 0 10px; /* Jarak antara teks dan garis */
+    font-weight: 200; /* Menebalkan teks */
+}
+.chat-messange {
+    background-color: #989797; /* Warna putih untuk container pesan */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek kedalaman */
+    padding: 20px;
+    height: 200px;
+    width: 200px;
+    margin-left: 800px;
+    top: -220px; /* Atur jarak atas sesuai kebutuhan untuk menempatkan di atas chat-container */
+    left: 50%; /* Mengatur posisi horizontal di tengah */
+    transform: translateX(-50%); /* Menggeser ke kiri separuh lebar elemen */
+    border-radius: 8px; /* Membuat sudut container melengkung */
+    z-index: 10; /* Pastikan elemen ini berada di atas */
 }
