@@ -32,7 +32,7 @@
                 <li class="item">
                     <div href="#" class="nav_link submenu_item">
                         <span class="navlink_icon">
-                            <img src="{{ asset('assets/ticket.png') }}" alt="Ticketing" style="width: 24px; height: 24px;" />
+                            <i class="bx bx-receipt"></i>
                         </span>
                         <span class="navlink">Ticketing</span>
                         <i class="bx bx-chevron-right arrow-left"></i>

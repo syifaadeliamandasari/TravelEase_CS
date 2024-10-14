@@ -273,6 +273,20 @@ body.dark {
     margin-left: 230px;
     margin-top: -10%;
 }
+.icon5 {
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    color: #34658c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 3%;
+    margin-top: 2%;
+}
 .header {
     display: flex;
     justify-content: space-between; /* Memastikan jarak antara konten di header */
@@ -360,11 +374,13 @@ body.dark {
 .chat-container {
     background-color: #EFF2F7; /* Warna abu-abu untuk container chat */
     padding: 20px;
-    height: 519px;
+    min-height: 519px; /* Mengatur tinggi minimum container */
     border-radius: 8px; /* Membuat sudut container melengkung */
     margin-top: 2px; /* Jarak antara tab dan container chat */
     position: relative; /* Menyediakan posisi relatif untuk anak elemen */
+    overflow-y: auto; /* Menambahkan scroll jika konten lebih tinggi dari container */
 }
+
 
 .chat-message {
     margin-bottom: 15px; /* Jarak antara pesan */
@@ -395,16 +411,97 @@ body.dark {
     margin: 0 10px; /* Jarak antara teks dan garis */
     font-weight: 200; /* Menebalkan teks */
 }
-.chat-messange {
-    background-color: #989797; /* Warna putih untuk container pesan */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek kedalaman */
-    padding: 20px;
-    height: 200px;
-    width: 200px;
-    margin-left: 800px;
-    top: -220px; /* Atur jarak atas sesuai kebutuhan untuk menempatkan di atas chat-container */
-    left: 50%; /* Mengatur posisi horizontal di tengah */
-    transform: translateX(-50%); /* Menggeser ke kiri separuh lebar elemen */
-    border-radius: 8px; /* Membuat sudut container melengkung */
-    z-index: 10; /* Pastikan elemen ini berada di atas */
+/* Chat Bubble */
+.bubbleWrapper {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.bubbleWrapper.sender {
+    margin-left: 400px; /* Bubble untuk pengirim */
+}
+
+.bubbleWrapper.own {
+    margin-left: 600px; /* Bubble untuk kamu */
+}
+
+.inlineContainer {
+    display: flex;
+    margin-top: 5%;
+    align-items: flex-start ;
+}
+.inlineContainer1 {
+    display: flex;
+    margin-top: 5%;
+    margin-left: 50%;
+    align-items: flex-start;
+}
+
+.inlineIcon {
+    width: 40px; /* Atur ukuran gambar */
+    height: 40px; /* Atur ukuran gambar */
+    margin-right: 10px; /* Jarak antara gambar dan teks */
+}
+
+.chatBubble {
+    max-width: 70%;
+    padding: 10px 15px;
+    border-radius: 20px;
+    background-color: #00a389;
+    font-size: 14px;
+    color: white;
+}
+
+.bubbleWrapper.own .chatBubble {
+    background-color: #E0E0E0;
+    color: rgb(0, 0, 0);
+    border-radius: 10px; /* Sudut melengkung */
+    padding: 10px; /* Padding di dalam bubble */
+    max-width: 400px; /* Lebar maksimum bubble */
+    word-wrap: break-word; /* Membungkus kata jika terlalu panjang */
+    overflow-wrap: break-word; /* Untuk mendukung kata yang lebih panjang */
+    margin-left: 0; /* Menghilangkan margin kiri */
+    text-align: left; /* Mengatur teks agar rata kiri */
+    line-height: 1.5; /* Jarak antar baris untuk keterbacaan */
+}
+
+
+.other {
+    font-size: 12px;
+    color: #888;
+    margin-top: 6%;
+    margin-left: -100px;
+
+}
+
+.other1 {
+    font-size: 12px; /* Ukuran font untuk waktu */
+    color: gray; /* Warna font untuk waktu */
+    margin-top: 90px; /* Jarak atas untuk memisahkan dari bubble */
+    margin-left: 20px;
+}
+/* Pesan Input */
+.message-input-container {
+    display: flex;
+    align-items: center;
+    margin-top: 4%;
+}
+
+.message-input {
+    width: 1000px; /* Lebar input diatur menjadi 50px */
+    padding: 10px;
+    margin-left: 380px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.send-button {
+    padding: 10px 20px;
+    background-color: #00a389;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
 }

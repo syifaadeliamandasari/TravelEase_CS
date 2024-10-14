@@ -32,7 +32,7 @@
                 <li class="item">
                     <a href="{{ route('tickets.index') }}" class="nav_link submenu_item">
                         <span class="navlink_icon">
-                            <img src="{{ asset('assets/ticket.png') }}" alt="Ticketing" style="width: 24px; height: 24px;">
+                            <i class="bx bx-receipt"></i>
                         </span>
                         <span class="navlink">Ticketing</span>
                         <i class="bx bx-chevron-right arrow-left"></i>
@@ -89,7 +89,9 @@
                     <p class="report-title">Dugaan Penipuan dari ...</p>
                     <span class="report-date">15 September 2024 08:29</span>
                 </div>
-                <button class="btn">Ambil Laporan</button>
+                <a href="{{ route('chat.index') }}" class="status-card">
+                    <button class="btn">Ambil Laporan</button>
+                </a>
             </div>
             <hr>
             <div class="report-item">
